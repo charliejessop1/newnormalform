@@ -1,0 +1,36 @@
+> module Compression where
+
+> import Prelude
+> import Data.List
+> import Data.Ord
+> import Data.Matrix 					hiding ((!),flatten) 
+> import qualified Data.Vector			as V
+> import qualified Data.Vector.Mutable	as MV
+> import Data.Tree
+> import Data.Graph
+> import Data.Array
+> import Matrix
+> import Util
+> import Automata
+> import GraphFunctions
+> import Martinez
+> import Lin
+> import Toggle
+> import BinaryE
+> import NFAe 
+> import NFA
+> import ArbitraryE
+
+> data compressedChr = compressedChr {
+>	tailLength :: Int
+>	, loopLengths :: [Int]
+>   , finals :: [Int]
+>	} deriving Show
+
+> compressChr :: ChrNF -> compressedChr 
+> compressChr c = compressedChr (length $ tailStates c) (map length (loopStates c)) finals
+> 	where 	{
+>		finals = 
+>		
+>			}
+
